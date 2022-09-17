@@ -1,0 +1,8 @@
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="addTodo()">
+    <h3>Create</h3>
+    <input formControlName="todo">
+    <div class="btn-gap">
+        <button class="btn" type="submit" [disabled]="!form.valid">Add</button>
+        <button class="btn" type="button" (click)="createFormClose.emit()">Cancel</button>
+    </div>
+</form>

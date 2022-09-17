@@ -1,0 +1,77 @@
+::ng-deep body,
+::ng-deep html {
+    background: #2c3158;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    color: #ffffff;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+}
+
+.btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 2px 18px;
+    outline: 2px solid #6770b7;
+}
+
+.btn:hover {
+    outline: 2px solid #8790d9;
+}
+
+.btn-two {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 1px 20px;
+    outline: 2px solid #6770b7;
+}
+
+.btn-two:hover {
+    outline: 2px solid #8790d9;
+}
+
+table {
+    width: 100%;
+    border-spacing: 6px;
+}
+
+tr th:nth-child(1) {
+    width: 100%;
+    outline: none;
+}
+
+tr th:nth-child(2) {
+    width: 100%;
+    min-width: 80px;
+    border: none;
+    text-align: left;
+    padding: 1px 10px;
+}
+
+tr th:nth-child(3) {
+    width: 100%;
+}
+
+tr th:nth-child(4) {
+    width: 100%;
+}
+
+.todo-complete {
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: black;
+}

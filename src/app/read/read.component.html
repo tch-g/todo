@@ -1,0 +1,26 @@
+<body>
+
+    <div class="main" *ngIf="showCreate === false && !showUpdate">
+        <div class="create">
+            <button class="btn" (click)="showCreate = true">Create</button>
+        </div>
+        <div class="list">
+            <table>
+                <tr *ngFor="let todo of todos">
+                    <th><input type="checkbox" class="todo-checkbox" [checked]="todo.checked" (change)="checkedTodo(todo.id)"></th>
+                    <th [ngClass]="{'todo-complete': todo.checked }">{{ todo.todo }}</th>
+                    <th><button class="btn-two" (click)="showUpdate = todo">Update</button></th>
+                    <th><button class="btn-two" (click)="deleteTodo = todo">Delete</button></th>
+                </tr>
+            </table>
+            <div *ngIf="todos.length == 0">List is Empty</div>
+        </div>
+    </div>
+
+
+    <app-create *ngIf="showCreate === true" (createFormClose)="closeCreate()"></app-create>
+    <app-update *ngIf="showUpdate" [todo]="showUpdate" (updateFormClose)="closeUpdate()"></app-update>
+    <app-confirm-dialog *ngIf="deleteTodo" [id]="deleteTodo.id" (confirm)="onConfirm($event)"></app-confirm-dialog>
+
+
+</body>

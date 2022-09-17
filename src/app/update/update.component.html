@@ -1,0 +1,8 @@
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="updateTodo()">
+    <h3>Update</h3>
+    <input formControlName="todo">
+    <div class="btn-gap">
+        <button class="btn" type="submit">Update</button>
+        <button class="btn" type="button" (click)="updateFormClose.emit()">Cancel</button>
+    </div>
+</form>
